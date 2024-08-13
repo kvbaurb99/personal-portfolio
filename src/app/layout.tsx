@@ -5,12 +5,13 @@ import { Poppins, Lato, Kaushan_Script } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bielsko-Biała | Frontend Developer - Jakub Urbański",
-  description: "Jakub Urbański - Frontend Developer Portfolio",
+  title: "Jakub Urbański | Front-end Developer | Bielsko-Biała",
+  description:
+    "Doświadczony Front-end Developer z Bielska-Białej, specjalizujący się w responsywnych stronach internetowych zoptymalizowanych pod SEO. Wykorzystuję AI do tworzenia innowacyjnych rozwiązań webowych.",
   keywords,
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
   openGraph,
 };

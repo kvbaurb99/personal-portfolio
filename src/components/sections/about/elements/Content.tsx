@@ -6,7 +6,7 @@ export default function Content() {
     <div>
       <AboutTitle>{aboutData.title}</AboutTitle>
       <AboutOverview>{aboutData.overview}</AboutOverview>
-      <AboutButton>Skontaktuj się ze mną</AboutButton>
+      <AboutButton>Zamów wycenę strony internetowej</AboutButton>
     </div>
   );
 }
