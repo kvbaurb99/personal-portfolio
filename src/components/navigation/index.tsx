@@ -11,7 +11,7 @@ export default function Navigation() {
         <NavList>
           {items.map((item, index) => (
             <NavItem key={index}>
-              <a href="#about">{item.title}</a>
+              <a href={item.id}>{item.title}</a>
             </NavItem>
           ))}
         </NavList>

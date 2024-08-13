@@ -1,17 +1,22 @@
 [
   {
-    "title": "O mnie"
+    "title": "O mnie",
+    "id": "#about"
   },
   {
-    "title": "Umiejętności"
+    "title": "Umiejętności",
+    "id": "#skills"
   },
   {
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "id": "#projects"
   },
   {
-    "title": "Oferta"
+    "title": "Oferta",
+    "id": "#offer"
   },
   {
-    "title": "Kontakt"
+    "title": "Kontakt",
+    "id": "#contact"
   }
 ]

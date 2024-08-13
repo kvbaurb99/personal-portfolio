@@ -27,3 +27,10 @@ export const Section = styled.section<SectionProps>`
       gap: 2rem;
     `}
 `;
+
+export const H2 = styled.h2`
+  font-size: 2rem;
+  color: #292929;
+  font-weight: 600;
+  font-family: var(--font-kaushan);
+`;
