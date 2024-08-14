@@ -13,7 +13,11 @@ export default function ProjectsSection() {
         {projects.map((project, index) => (
           <div key={index}>
             <ProjectImageContainer>
-              <ProjectImage src={CustomImage} alt={project.title} />
+              <ProjectImage
+                src={CustomImage}
+                alt={project.title}
+                loading="lazy"
+              />
             </ProjectImageContainer>
             <h3 className="poppins mt-2.5">{project.title}</h3>
           </div>

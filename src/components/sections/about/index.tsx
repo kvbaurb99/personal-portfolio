@@ -9,7 +9,6 @@ export default function AboutMe() {
     <Section $type="about" id="about">
       <AboutImage
         src={SectionImage}
-        loading="lazy"
         height={360}
         width={420}
         alt="About me"
