@@ -19,17 +19,19 @@ export default function SingleArticle({ params }: SingleArticleProps) {
       <Navigation isDark />
       <Section style={{ marginTop: "6.5rem" }}>
         <h1 className="kaushan text-5xl 2xl:leading-[60px]">{article.title}</h1>
-        <p className="mt-6 lato opacity-60">Opublikowany przez Jakub Urbański - 14.08.2024</p>
+        <p className="mt-6 lato opacity-60">
+          Opublikowany przez Jakub Urbański - 14.08.2024
+        </p>
         <Image
           src={article.image}
-          width={1280}
+          width={860}
           priority
           height={360}
           alt={article.title}
           className="w-full object-cover h-[560px] mt-6 shadow-lg shadow-black/20"
         />
         <div
-          className="article lato"
+          className="article mt-4 lato"
           dangerouslySetInnerHTML={{ __html: article.body }}
         />
       </Section>
