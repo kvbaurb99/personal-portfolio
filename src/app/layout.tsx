@@ -5,7 +5,7 @@ import { Poppins, Lato, Kaushan_Script, Jost } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jakub Urbański | Unity Developer | Bielsko-Biała",
+  title: "Jakub Urbański | Front-end Developer | Bielsko-Biała",
   description:
     "Doświadczony Front-end Developer z Bielska-Białej, specjalizujący się w responsywnych stronach internetowych zoptymalizowanych pod SEO. Wykorzystuję AI do tworzenia innowacyjnych rozwiązań webowych.",
   keywords,
