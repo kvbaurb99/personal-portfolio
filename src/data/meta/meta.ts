@@ -1,3 +1,5 @@
+import Background from "@/assets/header/background.jpg";
+
 export const keywords = [
   "portfolio",
   "jakub",
@@ -83,7 +85,7 @@ export const openGraph = {
   siteName: "Jakub Urbański",
   images: [
     {
-      url: "",
+      url: Background.src,
       width: 800,
       height: 600,
     },
