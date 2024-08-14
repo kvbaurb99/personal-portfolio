@@ -1,5 +1,6 @@
 import NextjsImage from "@/assets/blog/nextjs.jpg";
 import TypescriptJavascriptImage from "@/assets/blog/typescript-vs-javascript.jpg";
+import JavascriptImage from "@/assets/blog/javascript.png";
 
 export const articles = [
   {
@@ -23,7 +24,7 @@ export const articles = [
   {
     title:
       "10 Trików w JavaScript, Które Każdy Front-End Developer Powinien Znać w 2024 Roku",
-    image: NextjsImage,
+    image: JavascriptImage,
     slug: "10-trikow-w-javascript-ktore-kazdy-front-end-developer-powinien-znac-w-2024-roku",
     body: "",
     overview: "Test",
