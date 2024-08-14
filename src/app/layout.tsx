@@ -3,6 +3,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph } from "@/data/meta/meta";
 import { Poppins, Lato, Kaushan_Script, Jost } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Jakub Urbański | Unity Developer | Bielsko-Biała",
@@ -47,6 +48,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="QoNkPAx16C69E0jebhM9msZ6tMH9ejKnzdSo5CKLhXs"
+        />
+      </Head>
       <body
         className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
       >
