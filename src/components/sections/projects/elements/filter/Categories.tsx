@@ -1,10 +1,12 @@
 "use client";
 import categories from "@/data/sections/projects/filters/categories.json";
 import { CategoriesWrapper, CategoryButton } from "../../styles/projects";
-import { useState } from "react";
+import { CategoriesProps } from "@/types/projects";
 
-export default function Categories() {
-  const [currentCategory, setCurrentCategory] = useState<string>("all");
+export default function Categories({
+  currentCategory,
+  setCurrentCategory,
+}: CategoriesProps) {
   return (
     <CategoriesWrapper>
       {categories.map((category, index) => (
