@@ -1,4 +1,4 @@
-import articles from "@/data/blog/articles/articles.json";
+import { articles } from "@/data/blog/articles/articles";
 import type { PropsWithChildren } from "react";
 import { Metadata } from "next";
 
