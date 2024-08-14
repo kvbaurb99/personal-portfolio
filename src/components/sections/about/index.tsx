@@ -11,7 +11,7 @@ export default function AboutMe() {
         src={SectionImage}
         height={360}
         width={420}
-        alt="About me"
+        alt="O mnie"
       />
       <Content />
     </Section>

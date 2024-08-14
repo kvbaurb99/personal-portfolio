@@ -98,30 +98,4 @@ export const projects = [
       },
     ],
   },
-  {
-    title: "Takelink Domain Market",
-    slug: "landing-page",
-    category: "cms",
-    image: TakelinkImage,
-    details: [
-      {
-        title: "Autoryzacja użytkowników",
-      },
-      {
-        title: "System kupowania domen",
-      },
-      {
-        title: "Kupno artykułów i publikacji sponsorowanych",
-      },
-      {
-        title: "Implementacja systemu płatności",
-      },
-    ],
-    links: [
-      {
-        title: "Takelink",
-        url: "https://takelink.pl/",
-      },
-    ],
-  },
 ];

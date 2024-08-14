@@ -43,6 +43,7 @@ export default function ProjectsSection() {
                     src={project.image}
                     quality={100}
                     alt={project.title}
+                    title={project.title}
                     loading="lazy"
                     fill
                   />

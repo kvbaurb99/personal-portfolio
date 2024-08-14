@@ -10,7 +10,7 @@ export const AboutImage = styled(Image)`
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 `;
 
-export const AboutTitle = styled.h2`
+export const AboutTitle = styled.h1`
   font-size: 2rem;
   margin-top: 2rem;
   color: #292929;
