@@ -48,15 +48,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="QoNkPAx16C69E0jebhM9msZ6tMH9ejKnzdSo5CKLhXs"
-        />
-      </Head>
       <body
         className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
       >
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="QoNkPAx16C69E0jebhM9msZ6tMH9ejKnzdSo5CKLhXs"
+          />
+        </Head>
         <main>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </main>
