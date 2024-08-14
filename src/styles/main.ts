@@ -2,7 +2,7 @@
 import styled, { css } from "styled-components";
 
 type SectionProps = {
-  $type?: "about" | "skills";
+  $type?: "about" | "skills" | "post";
 };
 
 export const Backdrop = styled.div`
