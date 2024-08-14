@@ -10,7 +10,7 @@ type CategoryProps = {
 export const CategoriesWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 1.75rem;
+  margin-top: 1.375rem;
   gap: 1.75rem;
 `;
 
@@ -25,7 +25,7 @@ export const ProjectGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 `;
 
 export const ProjectItem = styled(motion.div)`

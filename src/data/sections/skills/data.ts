@@ -141,6 +141,10 @@ export const skills = [
         link: "",
       },
       {
+        name: "Framer Motion",
+        link: "https://eslint.org/",
+      },
+      {
         name: "next-intl",
         link: "https://next-intl-docs.vercel.app/",
       },
