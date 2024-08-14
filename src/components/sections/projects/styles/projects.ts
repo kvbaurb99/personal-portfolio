@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type CategoryProps = {
   $isActive: boolean;
@@ -10,7 +10,7 @@ type CategoryProps = {
 export const CategoriesWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 1.375rem;
+  margin-top: 1.75rem;
   gap: 1.75rem;
 `;
 
@@ -25,13 +25,13 @@ export const ProjectGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 `;
 
 export const ProjectItem = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  height: 300px; // Ustaw stałą wysokość dla całego elementu projektu
+  height: 100%; // Dostosowanie wysokości do zawartości
 `;
 
 export const ProjectContent = styled.div`
@@ -45,7 +45,12 @@ export const ProjectImageContainer = styled.figure`
   width: 100%;
   height: 250px;
   position: relative;
-  flex-grow: 1;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2); // Dodajemy stylowy cień
+  transition: box-shadow 0.3s ease; // Dodajemy płynne przejście dla cienia
+
+  &:hover {
+    box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.3); // Wzmacniamy cień przy hover
+  }
 `;
 
 export const ProjectImage = styled(Image)`
@@ -53,20 +58,35 @@ export const ProjectImage = styled(Image)`
   object-fit: cover;
 
   ${ProjectImageContainer}:hover & {
-    transform: scale(1.1);
+    transform: scale(1.05); // Zmniejszamy skalę, aby efekt był subtelniejszy
   }
 `;
 
 export const ProjectTitle = styled.h3`
-  margin-top: 0.875rem;
-  font-size: 1.05rem;
-  line-height: 1.2;
-  height: 2.4em;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
   opacity: 0.6;
-  font-family: var(--font-lato);
   font-weight: 500;
+  line-height: 1.2;
   overflow: hidden;
   display: -webkit-box;
+  font-family: var(--font-lato);
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+`;
+
+export const ProjectDetailsList = styled.ul`
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  flex-grow: 1; // Pozwala liście rosnąć i wypełnić dostępną przestrzeń
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+export const ProjectDetailItem = styled.li`
+  padding: 0.15rem 0;
+  font-family: var(--font-lato);
 `;
