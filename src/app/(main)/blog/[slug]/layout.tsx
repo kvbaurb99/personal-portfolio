@@ -18,6 +18,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `https://urbanski-dev.pl/blog/${params.slug}`,
     },
+    openGraph: {
+      title: article?.title,
+      description: article?.overview,
+      url: `https://urbanski-dev.pl/blog/${params.slug}`,
+      siteName: "urbanski-dev.pl",
+      images: [
+        {
+          url: String(article?.image.src),
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: "pl",
+      type: "website",
+    },
   };
 }
 
