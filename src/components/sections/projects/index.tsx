@@ -11,8 +11,8 @@ export default function ProjectsSection() {
       <Categories />
       <div className="mt-8 grid grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <div>
-            <ProjectImageContainer key={index}>
+          <div key={index}>
+            <ProjectImageContainer>
               <ProjectImage src={CustomImage} alt={project.title} />
             </ProjectImageContainer>
             <h3 className="poppins mt-2.5">{project.title}</h3>
