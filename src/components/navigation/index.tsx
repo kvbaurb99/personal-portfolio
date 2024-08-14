@@ -15,9 +15,10 @@ export default function Navigation({ isDark }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (isDark) return;
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(isDark ? true : scrollPosition > window.innerHeight);
+      setIsScrolled(scrollPosition > window.innerHeight);
       console.log(scrollPosition);
     };
 
@@ -29,7 +30,7 @@ export default function Navigation({ isDark }: Props) {
   }, []);
 
   return (
-    <Nav $isScrolled={isScrolled}>
+    <Nav $isScrolled={isDark ? true : isScrolled}>
       <NavContainer>
         <Link href={"/"}>
           <Image
