@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph,
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        href: "/favicon.png",
+      },
+    ],
+  },
 };
 
 const poppins = Poppins({
