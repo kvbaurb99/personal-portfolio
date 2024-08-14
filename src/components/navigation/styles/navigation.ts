@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavContainer = styled.nav`
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

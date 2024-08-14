@@ -21,9 +21,10 @@ export const AboutTitle = styled.h2`
 export const AboutOverview = styled.p`
   margin-top: 1.25rem;
   font-size: 1.05rem;
-  line-height: 28px;
+  line-height: 30px;
+  letter-spacing: 0.375px;
   opacity: 0.65;
-  font-family: var(--font-lato);
+  font-family: var(--font-jost);
 `;
 
 export const AboutButton = styled.button`

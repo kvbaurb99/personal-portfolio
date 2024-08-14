@@ -14,9 +14,9 @@ export default function Home() {
       <Navigation />
       <Header />
       <AboutMe />
-      <SkillsSection />
-      <ProjectsSection />
       <OfferSection />
+      <ProjectsSection />
+      <SkillsSection />
       <BlogSection />
       <ContactSection />
       <Footer />

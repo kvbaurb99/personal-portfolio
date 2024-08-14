@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph } from "@/data/meta/meta";
-import { Poppins, Lato, Kaushan_Script } from "next/font/google";
+import { Poppins, Lato, Kaushan_Script, Jost } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jakub Urbański | Front-end Developer | Bielsko-Biała",
+  title: "Jakub Urbański | Unity Developer | Bielsko-Biała",
   description:
     "Doświadczony Front-end Developer z Bielska-Białej, specjalizujący się w responsywnych stronach internetowych zoptymalizowanych pod SEO. Wykorzystuję AI do tworzenia innowacyjnych rozwiązań webowych.",
   keywords,
@@ -32,6 +32,12 @@ const kaushan = Kaushan_Script({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-kaushan",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-jost",
 });
 
 export default function RootLayout({

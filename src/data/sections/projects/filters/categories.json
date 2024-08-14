@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Wszystko",
+    "value": "all"
+  },
+  {
+    "title": "Wizytówki",
+    "value": "landing-page"
+  },
+  {
+    "title": "Strony CMS",
+    "value": "cms"
+  }
+]

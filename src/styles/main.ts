@@ -16,9 +16,9 @@ export const Backdrop = styled.div`
 
 export const Section = styled.section<SectionProps>`
   color: #000;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
-  margin-top: 3rem;
+  padding-top: 3rem;
   ${(props) =>
     props.$type === "about" &&
     css`
