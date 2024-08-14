@@ -1,12 +1,15 @@
-import Footer from "@/components/footer";
+import dynamic from "next/dynamic";
 import Header from "@/components/header";
 import Navigation from "@/components/navigation";
-import AboutMe from "@/components/sections/about";
-import BlogSection from "@/components/sections/blog";
-import ContactSection from "@/components/sections/contact";
 import OfferSection from "@/components/sections/offers";
 import ProjectsSection from "@/components/sections/projects";
-import SkillsSection from "@/components/sections/skills";
+
+// dynamic imports
+const Footer = dynamic(() => import("@/components/footer"));
+const AboutMe = dynamic(() => import("@/components/sections/about"));
+const BlogSection = dynamic(() => import("@/components/sections/blog"));
+const ContactSection = dynamic(() => import("@/components/sections/contact"));
+const SkillsSection = dynamic(() => import("@/components/sections/skills"));
 
 export default function Home() {
   return (

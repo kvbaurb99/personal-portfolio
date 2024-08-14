@@ -105,13 +105,16 @@ export const projects = [
     image: TakelinkImage,
     details: [
       {
-        title: "Implementacja systemu płatności",
+        title: "Autoryzacja użytkowników",
       },
       {
         title: "System kupowania domen",
       },
       {
         title: "Kupno artykułów i publikacji sponsorowanych",
+      },
+      {
+        title: "Implementacja systemu płatności",
       },
     ],
     links: [
