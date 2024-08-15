@@ -43,7 +43,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border: 1px solid #cccccc;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto; /* Umożliwia przewijanie poziome na małych ekranach */
 }
 
 .article table th,
@@ -71,4 +71,19 @@
 
 .article table tr:nth-child(even) {
   background-color: #fafafa;
+}
+
+@media screen and (max-width: 600px) {
+  .article table {
+    font-size: 14px; /* Zmniejszenie rozmiaru czcionki na mniejszych ekranach */
+  }
+
+  .article table th,
+  .article table td {
+    padding: 8px 10px; /* Zmniejszenie paddingu na mniejszych ekranach */
+  }
+
+  .article table th {
+    font-size: 12px; /* Mniejszy rozmiar czcionki dla nagłówków */
+  }
 }

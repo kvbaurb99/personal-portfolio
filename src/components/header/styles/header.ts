@@ -56,6 +56,6 @@ export const ArrowDownElement = styled(Image)`
   cursor: pointer;
   animation: ${bounce} 3s infinite;
   @media (max-width: 768px) {
-    width: 45px;
+    width: 40px;
   }
 `;
