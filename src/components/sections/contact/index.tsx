@@ -35,8 +35,8 @@ export default function ContactSection() {
             name="message"
             id="message"
           />
-          <button className="max-w-fit border mt-2.5 px-6 py-2 text-lg">
-            Wyślij wiadomość
+          <button className="max-w-fit border mt-2.5 px-6 py-2 text-lg rounded">
+            <span>Wyślij wiadomość</span>
           </button>
         </StyledForm>
         <StyledImage src={ContactImage} alt="contact" />

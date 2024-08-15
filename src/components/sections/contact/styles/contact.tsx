@@ -29,6 +29,7 @@ export const InputGrid = styled.div`
 
 export const Input = styled.input`
   border: 1px solid #ccc;
+  border-radius: 0.25rem;
   padding: 0.75rem;
 `;
 
@@ -37,6 +38,7 @@ export const TextArea = styled.textarea`
   border: 1px solid #ccc;
   width: 100%;
   resize: none;
+  border-radius: 0.25rem;
 `;
 
 export const StyledImage = styled(Image)`

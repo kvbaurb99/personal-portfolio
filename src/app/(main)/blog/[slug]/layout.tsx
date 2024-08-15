@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = articles.find((article) => article.slug === params.slug);
   return {
     title: article?.title,
-    description: article?.overview,
+    description: article?.meta_desc,
     robots: {
       index: false,
       follow: false,
