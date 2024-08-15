@@ -5,7 +5,6 @@ import OfferSection from "@/components/sections/offers";
 import ProjectsSection from "@/components/sections/projects";
 
 // dynamic imports
-const Footer = dynamic(() => import("@/components/footer"));
 const AboutMe = dynamic(() => import("@/components/sections/about"));
 const BlogSection = dynamic(() => import("@/components/sections/blog"));
 const ContactSection = dynamic(() => import("@/components/sections/contact"));
@@ -22,7 +21,6 @@ export default function Home() {
       <SkillsSection />
       <BlogSection />
       <ContactSection />
-      <Footer />
     </>
   );
 }

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph } from "@/data/meta/meta";
 import { Poppins, Lato, Kaushan_Script, Jost } from "next/font/google";
 import "./globals.css";
+
+const Footer = dynamic(() => import("@/components/footer"));
 
 export const metadata: Metadata = {
   title: "Jakub Urbański | Front-end Developer | Bielsko-Biała",
@@ -67,6 +70,7 @@ export default function RootLayout({
         <main>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </main>
+        <Footer />
       </body>
     </html>
   );
