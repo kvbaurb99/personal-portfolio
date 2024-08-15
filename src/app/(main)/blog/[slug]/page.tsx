@@ -18,8 +18,10 @@ export default function SingleArticle({ params }: SingleArticleProps) {
     <div className="text-black">
       <Navigation isDark />
       <Section style={{ marginTop: "6.5rem" }}>
-        <h1 className="kaushan text-5xl 2xl:leading-[60px]">{article.title}</h1>
-        <p className="mt-6 lato opacity-60">
+        <h1 className="kaushan text-3xl lg:text-5xl 2xl:leading-[60px]">
+          {article.title}
+        </h1>
+        <p className="mt-6 text-sm lg:text-base lato opacity-60">
           Opublikowany przez Jakub Urbański - 14.08.2024
         </p>
         <Image
@@ -28,7 +30,7 @@ export default function SingleArticle({ params }: SingleArticleProps) {
           priority
           height={360}
           alt={article.title}
-          className="w-full object-cover h-[560px] mt-6 shadow-lg shadow-black/20"
+          className="w-full object-cover h-[280px] lg:h-[560px] mt-6 shadow-lg shadow-black/20"
         />
         <div
           className="article mt-4 lato"

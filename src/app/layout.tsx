@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph } from "@/data/meta/meta";
-import { Poppins, Lato, Kaushan_Script, Jost } from "next/font/google";
+import { poppins, latto, kaushan } from "@/components/fonts/fonts";
 import "./globals.css";
 
 const Footer = dynamic(() => import("@/components/footer"));
@@ -26,30 +26,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-poppins",
-});
-
-const latto = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-lato",
-});
-
-const kaushan = Kaushan_Script({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-kaushan",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-jost",
-});
 
 export default function RootLayout({
   children,

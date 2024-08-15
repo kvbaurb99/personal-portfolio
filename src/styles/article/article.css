@@ -1,15 +1,15 @@
 .article h2 {
-  @apply text-3xl font-semibold mt-8;
+  @apply text-2xl lg:text-3xl font-semibold mt-8;
   font-family: var(--font-kaushan);
 }
 
 .article h3 {
-  @apply text-2xl font-semibold mt-8;
+  @apply text-xl lg:text-2xl font-semibold mt-8;
   font-family: var(--font-kaushan);
 }
 
 .article p {
-  @apply text-lg my-4 text-black opacity-65;
+  @apply text-base lg:text-lg my-4 text-black opacity-65;
 }
 
 .article img {
@@ -21,11 +21,11 @@
 }
 
 .article ul li {
-  @apply text-lg opacity-65;
+  @apply text-base lg:text-lg opacity-65;
 }
 
 .article div {
-  @apply text-lg leading-[36px];
+  @apply text-base lg:text-lg leading-[30px] 2xl:leading-[36px];
   padding: 1.5rem !important;
 }
 
