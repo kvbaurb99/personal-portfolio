@@ -26,6 +26,17 @@ export const Section = styled.section<SectionProps>`
 
       gap: 2rem;
     `}
+  @media (max-width: 768px) {
+    width: 90%;
+    ${(props) =>
+      props.$type === "about" &&
+      css`
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.5rem;
+      `}
+  }
 `;
 
 export const H2 = styled.h2`

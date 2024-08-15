@@ -26,6 +26,9 @@ export const ProjectGrid = styled(motion.div)`
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ProjectItem = styled(motion.div)`

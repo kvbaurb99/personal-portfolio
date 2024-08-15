@@ -67,7 +67,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
       >
-        <main>
+        <main style={{ overflow: "hidden" }}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </main>
         <Footer />

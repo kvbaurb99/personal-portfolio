@@ -8,6 +8,10 @@ export const Grid = styled.div`
   margin-top: 1.5rem;
   gap: 2.5rem;
   position: relative;
+  @media (max-width: 768px) {
+    
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -19,12 +23,19 @@ export const StyledForm = styled.form`
   position: sticky;
   top: 8rem;
   left: 0;
+  @media (max-width: 768px) {
+    position: static;
+    grid-column: span 1;
+  }
 `;
 
 export const InputGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.625rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Input = styled.input`
@@ -47,4 +58,8 @@ export const StyledImage = styled(Image)`
   object-fit: cover;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  @media (max-width: 768px) {
+    grid-column: span 1;
+    height: 360px;
+  }
 `;

@@ -18,6 +18,10 @@ export const SkillContainer = styled.div`
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 0.875rem;
   gap: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Skill = styled.a<SkillLineProps>`

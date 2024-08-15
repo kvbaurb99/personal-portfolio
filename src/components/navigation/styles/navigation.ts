@@ -30,6 +30,9 @@ export const NavContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const NavList = styled.ul<PropsNavList>`
@@ -38,6 +41,9 @@ export const NavList = styled.ul<PropsNavList>`
   color: ${({ $isDark }) =>
     $isDark ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)"};
   gap: 2rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`

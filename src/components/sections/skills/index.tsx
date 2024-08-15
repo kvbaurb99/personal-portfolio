@@ -15,7 +15,7 @@ export default function SkillsSection() {
         {skills.map((skill, index) => (
           <SkillContainer key={index}>
             <h3 className="opacity-50">{skill.name}</h3>
-            <div className="flex gap-2.5">
+            <div className="flex flex-wrap gap-2.5">
               {skill.items.map((item, index) => (
                 <Skill
                   href={item.link ? item.link : "#"}

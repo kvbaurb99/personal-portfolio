@@ -9,12 +9,18 @@ export const HeaderContainer = styled.header`
   align-items: center;
   height: 100vh;
   width: 100%;
+  @media (max-width: 768px) {
+    height: 575px;
+  }
 `;
 
 export const HeaderTitle = styled.p`
   color: white;
   font-size: 66px;
   font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 38px;
+  }
 `;
 
 export const SocialsList = styled.ul`
@@ -22,6 +28,9 @@ export const SocialsList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 `;
 
 export const SocialsItem = styled.li``;
@@ -46,4 +55,7 @@ export const ArrowDownElement = styled(Image)`
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 3s infinite;
+  @media (max-width: 768px) {
+    width: 45px;
+  }
 `;
