@@ -6,7 +6,7 @@ export default function Content() {
     <div>
       <AboutTitle>{aboutData.title}</AboutTitle>
       <AboutOverview dangerouslySetInnerHTML={{ __html: aboutData.overview }} />
-      <AboutButton>Zamów wycenę strony internetowej</AboutButton>
+      <AboutButton>Skontaktuj się ze mną</AboutButton>
     </div>
   );
 }
