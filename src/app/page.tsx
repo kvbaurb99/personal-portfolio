@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Header from "@/components/header";
 import Navigation from "@/components/navigation";
-import OfferSection from "@/components/sections/offers";
 import ProjectsSection from "@/components/sections/projects";
 
 // dynamic imports
@@ -16,8 +15,6 @@ export default function Home() {
       <Navigation />
       <Header />
       <AboutMe />
-      <OfferSection />
-      <ProjectsSection />
       <SkillsSection />
       <BlogSection />
       <ContactSection />
