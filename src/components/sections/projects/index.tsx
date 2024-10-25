@@ -49,6 +49,7 @@ export default function ProjectsSection() {
                   />
                 </ProjectImageContainer>
                 <ProjectTitle>{project.title}</ProjectTitle>
+                {/*}
                 <div className="flex gap-2 mt-3">
                   {project.links.map((link, index) => (
                     <Skill
@@ -63,6 +64,7 @@ export default function ProjectsSection() {
                     </Skill>
                   ))}
                 </div>
+                {*/}
                 <ProjectDetailsList>
                   {project.details.map((detail, index) => (
                     <ProjectDetailItem key={index}>
