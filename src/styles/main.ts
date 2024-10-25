@@ -37,6 +37,13 @@ export const Section = styled.section<SectionProps>`
         gap: 0.5rem;
       `}
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 80%;
+  }
 `;
 
 export const H2 = styled.h2`

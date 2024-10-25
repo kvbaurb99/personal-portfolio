@@ -33,6 +33,12 @@ export const NavContainer = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 80%;
+  }
 `;
 
 export const NavList = styled.ul<PropsNavList>`

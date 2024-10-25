@@ -23,7 +23,16 @@ export const projects = [
         title: "Wielojęzyczność",
       },
     ],
-    links: [],
+    links: [
+      {
+        title: "EdukacjaKrytyczna",
+        url: "https://edukacjakrytyczna.pl/",
+      },
+      {
+        title: "Ekogroszek Podhale",
+        url: "https://ekogroszek-podhale.pl/",
+      },
+    ],
   },
   {
     title: "Video on Demand Content Management System",
@@ -44,7 +53,16 @@ export const projects = [
         title: "Wielojęzyczność",
       },
     ],
-    links: [],
+    links: [
+      {
+        title: "Zalukaj",
+        url: "https://zalukaj.io/",
+      },
+      {
+        title: "MEGAKino.co",
+        url: "https://megakino-co.com/",
+      },
+    ],
   },
   {
     title: "Magro MK Grolik Spółka Jawna",
@@ -65,6 +83,11 @@ export const projects = [
         title: "Wielojęzyczność",
       },
     ],
-    links: [],
+    links: [
+      {
+        title: "Magro MK Grolik",
+        url: "https://magro.info.pl/",
+      },
+    ],
   },
 ];

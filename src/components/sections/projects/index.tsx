@@ -49,7 +49,20 @@ export default function ProjectsSection() {
                   />
                 </ProjectImageContainer>
                 <ProjectTitle>{project.title}</ProjectTitle>
-                <div className="flex gap-2 mt-3"></div>
+                <div className="flex gap-2 mt-3">
+                  {project.links.map((link, index) => (
+                    <Skill
+                      key={index}
+                      $isLink
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.title}
+                      <SkillBottomLine $isLink />
+                    </Skill>
+                  ))}
+                </div>
                 <ProjectDetailsList>
                   {project.details.map((detail, index) => (
                     <ProjectDetailItem key={index}>
