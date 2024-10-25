@@ -13,7 +13,7 @@ export default function Header() {
         fill
         priority
         alt="Header background"
-        className="header-fade"
+        className="header-fade object-cover lg:object-fill"
       />
       <Content />
       <ArrowDown />

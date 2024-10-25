@@ -28,10 +28,10 @@ export const AboutTitle = styled.h1`
 export const AboutOverview = styled.p`
   margin-top: 1.25rem;
   font-size: 1.05rem;
-  line-height: 30px;
+  line-height: 29px;
   letter-spacing: 0.375px;
   opacity: 0.65;
-  font-family: var(--font-jost);
+  font-family: var(--font-poppins);
   @media (max-width: 768px) {
     font-size: 0.95rem;
     line-height: 26px;
