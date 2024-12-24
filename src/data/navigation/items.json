@@ -4,15 +4,11 @@
     "id": "/#about"
   },
   {
-    "title": "Portfolio",
-    "id": "/#projects"
-  },
-  {
     "title": "Umiejętności",
     "id": "/#skills"
   },
   {
-    "title": "Blog",
-    "id": "/#blog"
+    "title": "Portfolio",
+    "id": "/#projects"
   }
 ]

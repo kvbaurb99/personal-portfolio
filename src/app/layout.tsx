@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph,
+  alternates: {
+    canonical: "https://urbanski-frontend.pl",
+  },
   icons: {
     icon: [
       {

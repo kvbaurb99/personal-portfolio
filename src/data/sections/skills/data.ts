@@ -43,18 +43,6 @@ export const skills = [
         name: "Next.js",
         link: "https://nextjs.org/",
       },
-      {
-        name: "Nest.js",
-        link: "https://nestjs.com/",
-      },
-      {
-        name: "Django",
-        link: "https://www.djangoproject.com/",
-      },
-      {
-        name: "Unity",
-        link: "https://www.djangoproject.com/",
-      },
     ],
   },
   {
@@ -205,6 +193,10 @@ export const skills = [
       },
       {
         name: "Gemini",
+        link: "B1",
+      },
+      {
+        name: "Grok",
         link: "B1",
       },
     ],

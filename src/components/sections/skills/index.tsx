@@ -22,7 +22,7 @@ export default function SkillsSection() {
                   key={index}
                   $isLink={item.link ? true : false}
                 >
-                  {item.name}
+                  <h4>{item.name}</h4>
                   <SkillBottomLine $isLink={item.link ? true : false} />
                 </Skill>
               ))}

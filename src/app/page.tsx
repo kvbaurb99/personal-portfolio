@@ -2,27 +2,22 @@ import dynamic from "next/dynamic";
 import Header from "@/components/header";
 import Navigation from "@/components/navigation";
 import ProjectsSection from "@/components/sections/projects";
-import { headers } from "next/headers";
-import MobileDetect from "mobile-detect";
+import { getHeadersData } from "@/utils/headersData";
+import { Fragment } from "react";
 
 // dynamic imports
 const AboutMe = dynamic(() => import("@/components/sections/about"));
-const BlogSection = dynamic(() => import("@/components/sections/blog"));
-const ContactSection = dynamic(() => import("@/components/sections/contact"));
 const SkillsSection = dynamic(() => import("@/components/sections/skills"));
 
 export default async function Home() {
-  const headerList = await headers();
-  const userAgent = headerList.get("user-agent") || "";
-  const md = new MobileDetect(userAgent);
+  const { isMobile } = await getHeadersData();
   return (
-    <>
+    <Fragment>
       <Navigation />
       <Header />
-      <AboutMe isMobile={Boolean(md.mobile())} />
+      <AboutMe isMobile={isMobile} />
       <SkillsSection />
       <ProjectsSection />
-      <BlogSection />
-    </>
+    </Fragment>
   );
 }
