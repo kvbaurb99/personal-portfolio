@@ -11,8 +11,8 @@ const BlogSection = dynamic(() => import("@/components/sections/blog"));
 const ContactSection = dynamic(() => import("@/components/sections/contact"));
 const SkillsSection = dynamic(() => import("@/components/sections/skills"));
 
-export default function Home() {
-  const headerList = headers();
+export default async function Home() {
+  const headerList = await headers();
   const userAgent = headerList.get("user-agent") || "";
   const md = new MobileDetect(userAgent);
   return (

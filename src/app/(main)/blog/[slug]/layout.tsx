@@ -3,10 +3,11 @@ import type { PropsWithChildren } from "react";
 import { Metadata } from "next";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const article = articles.find((article) => article.slug === params.slug);
   return {
     title: article?.title,

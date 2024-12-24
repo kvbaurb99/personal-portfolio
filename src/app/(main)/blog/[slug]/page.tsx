@@ -6,12 +6,13 @@ import { notFound } from "next/navigation";
 import Navigation from "@/components/navigation";
 
 type SingleArticleProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function SingleArticle({ params }: SingleArticleProps) {
+export default async function SingleArticle(props: SingleArticleProps) {
+  const params = await props.params;
   const article = articles.find((article) => article.slug === params.slug);
   if (!article) return notFound();
   return (
