@@ -3,7 +3,6 @@ import Header from "@/components/header";
 import Navigation from "@/components/navigation";
 import ProjectsSection from "@/components/sections/projects";
 import { getHeadersData } from "@/utils/headersData";
-import { Fragment } from "react";
 import ExperienceTimeline from "@/components/experience";
 
 // dynamic imports
@@ -13,13 +12,13 @@ const SkillsSection = dynamic(() => import("@/components/sections/skills"));
 export default async function Home() {
   const { isMobile } = await getHeadersData();
   return (
-    <Fragment>
+    <>
       <Navigation />
       <Header />
       <AboutMe isMobile={isMobile} />
       <ExperienceTimeline />
       <SkillsSection />
       <ProjectsSection />
-    </Fragment>
+    </>
   );
 }

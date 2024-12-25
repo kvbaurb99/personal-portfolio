@@ -13,7 +13,6 @@ import {
 } from "./styles/projects";
 import { AnimatePresence } from "framer-motion";
 import { useProjectFilter } from "@/hooks/useProjectsFilterHook";
-import { Skill, SkillBottomLine } from "../skills/styles/skills";
 
 export default function ProjectsSection() {
   const { currentCategory, projectsData, handleCategoryChange } =

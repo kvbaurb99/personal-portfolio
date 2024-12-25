@@ -1,4 +1,4 @@
-import { AboutButton, AboutOverview, AboutTitle } from "../styles/about";
+import { AboutOverview, AboutTitle } from "../styles/about";
 import { aboutData } from "@/data/sections/about/data";
 
 export default function Content() {
@@ -6,7 +6,6 @@ export default function Content() {
     <div>
       <AboutTitle>{aboutData.title}</AboutTitle>
       <AboutOverview dangerouslySetInnerHTML={{ __html: aboutData.overview }} />
-      <AboutButton>Skontaktuj się ze mną</AboutButton>
     </div>
   );
 }
