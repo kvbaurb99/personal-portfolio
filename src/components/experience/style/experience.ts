@@ -41,6 +41,9 @@ export const ContentCard = styled.div`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   margin-left: 2.5rem;
+  @media (max-width: 768px) {
+    margin-left: 1.25rem;
+  }
 `;
 
 export const CardHeader = styled.div`
@@ -48,6 +51,11 @@ export const CardHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
 `;
 
 export const CompanyName = styled.h3`
