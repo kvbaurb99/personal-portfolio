@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const TimelineContainer = styled.div`
   position: relative;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 `;
 
 export const VerticalLine = styled.div`
