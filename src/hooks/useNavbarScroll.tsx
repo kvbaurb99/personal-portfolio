@@ -15,7 +15,7 @@ export const useNavbarScroll = (isDark?: boolean) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isDark]);
   return {
     isScrolled,
   };
