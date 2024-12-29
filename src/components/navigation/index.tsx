@@ -18,9 +18,6 @@ type Props = {
 export default function Navigation({ isDark }: Props) {
   const [isMobileView, setIsMobileView] = useState(false);
   const { isScrolled } = useNavbarScroll(isDark);
-  const MobileView = isMobileView ? (
-    <MobileMenu isMobileView={isMobileView} setIsMobileView={setIsMobileView} />
-  ) : null;
 
   return (
     <>
@@ -53,7 +50,12 @@ export default function Navigation({ isDark }: Props) {
           />
         </NavContainer>
       </Nav>
-      {MobileView}
+      {isMobileView ? (
+        <MobileMenu
+          isMobileView={isMobileView}
+          setIsMobileView={setIsMobileView}
+        />
+      ) : null}
     </>
   );
 }

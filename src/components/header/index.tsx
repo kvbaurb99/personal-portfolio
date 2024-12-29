@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HeaderContainer } from "./styles/header";
-import Background from "@/assets/header/background.jpg";
+import Background from "@/assets/header/background.webp";
 import { Backdrop } from "@/styles/main";
 import Content from "./elements/Content";
 import ArrowDown from "./elements/ArrowDown";

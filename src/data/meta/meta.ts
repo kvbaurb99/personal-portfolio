@@ -1,4 +1,4 @@
-import Background from "@/assets/header/background.jpg";
+import Background from "@/assets/header/background.webp";
 
 export const title = "Jakub Urbański | Front-end Developer | Bielsko-Biała";
 
