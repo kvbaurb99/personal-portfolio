@@ -19,7 +19,7 @@ import {
 
 const ExperienceTimeline = () => {
   return (
-    <Section $type="about" id="about">
+    <Section $type="about" id="exp">
       <div>
         <H2>Doświadczenie zawodowe</H2>
         <TimelineContainer>

@@ -50,7 +50,7 @@ export const CardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -62,29 +62,38 @@ export const CompanyName = styled.h3`
   font-size: 1.25rem;
   font-weight: 700;
   color: #1f2937;
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
 `;
 
 export const Period = styled.div`
   display: flex;
   align-items: center;
   color: #4b5563;
+  font-size: 0.875rem;
 `;
 
 export const Position = styled.div`
   display: flex;
   align-items: center;
   color: #374151;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
 `;
 
 export const Description = styled.p`
   color: #4b5563;
   margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const TechStack = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
   gap: 0.5rem;
 `;
 
@@ -94,6 +103,9 @@ export const TechTag = styled.span`
   color: #374151;
   border-radius: 9999px;
   font-size: 0.875rem;
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const IconWrapper = styled.span`

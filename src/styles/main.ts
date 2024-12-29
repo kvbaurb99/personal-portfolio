@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 type SectionProps = {
   $type?: "about" | "skills" | "post";
+  $reverse?: boolean;
 };
 
 export const Backdrop = styled.div`
@@ -19,10 +20,12 @@ export const Section = styled.section<SectionProps>`
   width: 70%;
   margin: 0 auto;
   padding-top: 3rem;
+  flex-direction: ${(props) => (props.$reverse ? "row-reverse" : "row")};
   ${(props) =>
     props.$type === "about" &&
     css`
       display: flex;
+      align-items: center;
 
       gap: 2rem;
     `}
@@ -51,4 +54,7 @@ export const H2 = styled.h2`
   color: #292929;
   font-weight: 600;
   font-family: var(--font-kaushan);
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+  }
 `;

@@ -4,19 +4,13 @@ import { AboutImage } from "./styles/about";
 import Content from "./elements/Content";
 
 type Props = {
-  isMobile: boolean;
+  reverse?: boolean;
 };
 
-export default function AboutMe({ isMobile }: Props) {
+export default function AboutMe({ reverse }: Props) {
   return (
-    <Section $type="about" id="about">
-      <AboutImage
-        priority={isMobile}
-        src={SectionImage}
-        height={360}
-        width={420}
-        alt="O mnie"
-      />
+    <Section $type="about" $reverse={reverse} id="about">
+      <AboutImage src={SectionImage} height={360} width={420} alt="O mnie" />
       <Content />
     </Section>
   );

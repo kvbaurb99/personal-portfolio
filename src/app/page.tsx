@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import Navigation from "@/components/navigation";
 import ProjectsSection from "@/components/sections/projects";
 import { getHeadersData } from "@/utils/headersData";
-import ExperienceTimeline from "@/components/experience";
+import ExperienceTimeline from "@/components/sections/experience";
 
 // dynamic imports
 const AboutMe = dynamic(() => import("@/components/sections/about"));
@@ -15,7 +15,8 @@ export default async function Home() {
     <>
       <Navigation />
       <Header />
-      <AboutMe isMobile={isMobile} />
+      <AboutMe />
+      <AboutMe reverse />
       <ExperienceTimeline />
       <SkillsSection />
       <ProjectsSection />
