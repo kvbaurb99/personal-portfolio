@@ -51,11 +51,6 @@ export const CardHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.75rem;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
 `;
 
 export const CompanyName = styled.h3`

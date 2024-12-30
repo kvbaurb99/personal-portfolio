@@ -10,7 +10,13 @@ type Props = {
 export default function AboutMe({ reverse }: Props) {
   return (
     <Section $type="about" $reverse={reverse} id="about">
-      <AboutImage src={SectionImage} height={360} width={420} alt="O mnie" />
+      <AboutImage
+        src={SectionImage}
+        height={360}
+        width={420}
+        loading="lazy"
+        alt="O mnie"
+      />
       <Content />
     </Section>
   );
