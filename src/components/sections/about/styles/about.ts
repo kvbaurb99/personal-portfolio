@@ -22,6 +22,7 @@ export const AboutTitle = styled.h1`
   font-family: var(--font-kaushan);
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    margin-top: 1.25rem;
   }
 `;
 

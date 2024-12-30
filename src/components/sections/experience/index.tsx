@@ -39,7 +39,6 @@ const ExperienceTimeline = () => {
                     <span>{exp.period}</span>
                   </Period>
                 </CardHeader>
-
                 <Position>
                   <IconWrapper>
                     <Briefcase className="w-4 h-4" />

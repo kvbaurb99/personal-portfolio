@@ -61,6 +61,6 @@ export const H2 = styled.h2`
   font-weight: 600;
   font-family: var(--font-kaushan);
   @media (max-width: 768px) {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 `;

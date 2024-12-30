@@ -58,7 +58,7 @@ export const CompanyName = styled.h3`
   font-weight: 700;
   color: #1f2937;
   @media (max-width: 768px) {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 `;
 
@@ -67,6 +67,9 @@ export const Period = styled.div`
   align-items: center;
   color: #4b5563;
   font-size: 0.875rem;
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const Position = styled.div`
@@ -75,6 +78,9 @@ export const Position = styled.div`
   color: #374151;
   margin-bottom: 0.75rem;
   font-size: 0.875rem;
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const Description = styled.p`
