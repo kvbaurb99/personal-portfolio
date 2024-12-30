@@ -7,16 +7,17 @@ import Content from "./elements/Content";
 
 type Props = {
   reverse?: boolean;
+  isMobile: boolean;
 };
 
-export default function AboutMe({ reverse }: Props) {
+export default function AboutMe({ reverse, isMobile }: Props) {
   const currentData = reverse ? aboutDataReverse : aboutData;
   return (
     <Section $type="about" $reverse={reverse} id="about">
       <AboutImage
         src={reverse ? SectionImageReverse : SectionImage}
         height={360}
-        width={420}
+        width={isMobile ? 260 : 420}
         loading="lazy"
         alt="O mnie"
       />
