@@ -20,3 +20,17 @@ export const MobileMenuContainer = styled.div`
   justify-content: space-between;
   padding: 2rem 0;
 `;
+
+export const MobileMenuList = styled.ul`
+  width: 90%;
+  margin: 0 auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2rem 0 3rem 0;
+`;
+
+export const MobileMenuItem = styled.li`
+  font-size: 1.125rem;
+`;
