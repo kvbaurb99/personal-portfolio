@@ -1,7 +1,13 @@
 import { AboutOverview, AboutTitle } from "../styles/about";
-import { aboutData } from "@/data/sections/about/data";
 
-export default function Content() {
+type Props = {
+  aboutData: {
+    title: string;
+    overview: string;
+  };
+};
+
+export default function Content({ aboutData }: Props) {
   return (
     <div>
       <AboutTitle>{aboutData.title}</AboutTitle>
