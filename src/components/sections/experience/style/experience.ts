@@ -42,7 +42,7 @@ export const ContentCard = styled.div`
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   margin-left: 2.5rem;
   @media (max-width: 768px) {
-    margin-left: 1.25rem;
+    margin-left: 0.875rem;
   }
 `;
 

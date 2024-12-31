@@ -9,6 +9,7 @@ export const MobileMenuLayout = styled.div`
   width: 100%;
   background-color: white;
   height: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // dodany cień
 `;
 
 export const MobileMenuContainer = styled.div`
@@ -33,4 +34,5 @@ export const MobileMenuList = styled.ul`
 
 export const MobileMenuItem = styled.li`
   font-size: 1.125rem;
+  font-weight: 300;
 `;
