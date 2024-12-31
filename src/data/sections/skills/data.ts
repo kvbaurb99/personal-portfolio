@@ -125,12 +125,20 @@ export const skills = [
         link: "https://www.i18next.com/",
       },
       {
-        name: "zod",
+        name: "next-auth",
+        link: "https://next-auth.js.org/",
+      },
+      {
+        name: "neshca/cache-handler",
         link: "",
       },
       {
+        name: "zod",
+        link: "https://zod.dev/",
+      },
+      {
         name: "Framer Motion",
-        link: "https://eslint.org/",
+        link: "https://motion.dev/",
       },
       {
         name: "next-intl",
@@ -164,11 +172,11 @@ export const skills = [
       },
       {
         name: "Jest",
-        link: "B1",
+        link: "https://jestjs.io/",
       },
       {
         name: "Cypress",
-        link: "B1",
+        link: "https://docs.cypress.io/app/get-started/why-cypress",
       },
     ],
   },
@@ -177,27 +185,27 @@ export const skills = [
     items: [
       {
         name: "ChatGPT",
-        link: "B2",
+        link: "",
       },
       {
         name: "Dall-E 2/3",
-        link: "B2",
+        link: "",
       },
       {
         name: "Speechify",
-        link: "B2",
+        link: "",
       },
       {
         name: "Claude.ai",
-        link: "B1",
+        link: "",
       },
       {
         name: "Gemini",
-        link: "B1",
+        link: "",
       },
       {
         name: "Grok",
-        link: "B1",
+        link: "",
       },
     ],
   },
@@ -206,27 +214,27 @@ export const skills = [
     items: [
       {
         name: "Visual Studio Code",
-        link: "B2",
+        link: "",
       },
       {
         name: "PyCharm",
-        link: "B1",
+        link: "",
       },
       {
         name: "Figma",
-        link: "B1",
+        link: "",
       },
       {
         name: "Postman",
-        link: "B1",
+        link: "",
       },
       {
         name: "Testfully",
-        link: "B1",
+        link: "",
       },
       {
         name: "Redis Insight",
-        link: "B1",
+        link: "",
       },
     ],
   },
