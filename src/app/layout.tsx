@@ -27,6 +27,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  publisher: "https://urbanski-frontend.pl",
+  authors: [
+    {
+      name: "https://urbanski-frontend.pl",
+    },
+  ],
 };
 
 export default function RootLayout({
