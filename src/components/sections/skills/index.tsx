@@ -18,6 +18,7 @@ export default function SkillsSection() {
             <div className="flex flex-wrap gap-2.5">
               {skill.items.map((item, index) => (
                 <Skill
+                  rel="nofollow noopener noreferrer"
                   href={item.link ? item.link : "#"}
                   key={index}
                   $isLink={item.link ? true : false}
