@@ -42,6 +42,16 @@ export const experiences = [
     period: "2016 - 2018",
     description:
       "Kompleksowa obsługa techniczna klientów w zakresie diagnostyki i naprawy sprzętu komputerowego, obejmująca montaż komponentów, instalację systemów operacyjnych oraz rozwiązywanie problemów sprzętowych i programowych. Specjalizacja w konfiguracji nowych zestawów komputerowych zgodnie z potrzebami klientów oraz świadczenie profesjonalnego doradztwa w zakresie doboru podzespołów i oprogramowania.",
-    technologies: ["React", "Next.js", "TypeScript", "Redux"],
+    technologies: [
+      "Windows",
+      "Hardware Diagnostics",
+      "Computer Repair",
+      "Software Installation",
+      "Hardware Components",
+      "Network Configuration",
+      "Virus Removal",
+      "Microsoft Office",
+      "Customer Service",
+    ],
   },
 ];
