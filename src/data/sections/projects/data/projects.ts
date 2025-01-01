@@ -100,9 +100,6 @@ export const projects = [
         title: "Autoryzacja użytkowników",
       },
       {
-        title: "System kupowania domen",
-      },
-      {
         title: "Kupno artykułów i publikacji sponsorowanych",
       },
       {
