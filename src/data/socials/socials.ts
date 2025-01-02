@@ -10,6 +10,6 @@ export const socials = [
   {
     name: "Linkedin",
     image: LinkedinIcon,
-    url: "www.linkedin.com/in/jakub-urbański-99a2k",
+    url: "https://www.linkedin.com/in/jakub-urbański-99a2k",
   },
 ];
