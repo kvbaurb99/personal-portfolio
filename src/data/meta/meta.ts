@@ -1,6 +1,6 @@
 import Background from "@/assets/header/background.webp";
 
-export const title = "Jakub Urbański | Front-end Developer | Bielsko-Biała";
+export const title = "Jakub Urbański Software Developments | Bielsko-Biała";
 
 export const description =
   "Doświadczony Front-end Developer z Bielska-Białej, specjalizujący się w responsywnych stronach internetowych zoptymalizowanych pod SEO. Wykorzystuję AI do tworzenia innowacyjnych rozwiązań webowych.";
