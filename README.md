@@ -11,8 +11,7 @@ Modern frontend developer portfolio created using Next.js 15, React, and Styled 
 
 - Responsive design working on all devices
 - Multilingual support (PL/EN) implemented using @inlang/paraglide-js
-- Dark/Light mode
-- Smooth animations and transitions between sections
+- Smooth animations
 - Optimized image and resource loading
 - Server-side rendering for better performance and SEO
 
