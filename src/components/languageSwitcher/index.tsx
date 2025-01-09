@@ -41,8 +41,8 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
     <Container ref={dropdownRef}>
       <Button $isScrolled={isScrolled} onClick={() => setIsOpen(!isOpen)}>
         <span className="flex items-center gap-2">
-          <FlagContainer $isActive={currentLocale === "en"}>🇬🇧</FlagContainer>
           <FlagContainer $isActive={currentLocale === "pl"}>🇵🇱</FlagContainer>
+          <FlagContainer $isActive={currentLocale === "en"}>🇬🇧</FlagContainer>
         </span>
         <LanguageText>
           {currentLocale === "en" ? "English" : "Polski"}
@@ -64,17 +64,6 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
         <Dropdown $isScrolled={isScrolled}>
           <LanguageLink
             href={pathname}
-            locale="en"
-            hrefLang="en"
-            $isScrolled={isScrolled}
-            $isActive={currentLocale === "en"}
-            onClick={() => setIsOpen(false)}
-          >
-            <FlagContainer $isActive={true}>🇬🇧</FlagContainer>
-            English
-          </LanguageLink>
-          <LanguageLink
-            href={pathname}
             locale="pl"
             hrefLang="pl"
             $isScrolled={isScrolled}
@@ -83,6 +72,17 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
           >
             <FlagContainer $isActive={true}>🇵🇱</FlagContainer>
             Polski
+          </LanguageLink>
+          <LanguageLink
+            href={pathname}
+            locale="en"
+            hrefLang="en"
+            $isScrolled={isScrolled}
+            $isActive={currentLocale === "en"}
+            onClick={() => setIsOpen(false)}
+          >
+            <FlagContainer $isActive={true}>🇬🇧</FlagContainer>
+            English
           </LanguageLink>
         </Dropdown>
       )}
