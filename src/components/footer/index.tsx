@@ -1,3 +1,4 @@
+import * as m from "@/paraglide/messages.js";
 import LogoDark from "@/assets/logo/J_dark.png";
 import Image from "next/image";
 
@@ -16,7 +17,9 @@ export default function Footer() {
           <div className="space-y-2 text-black">
             <p className="opacity-60">Jakub Urbański</p>
             <p className="text-sm italic">urbanski-frontend.pl</p>
-            <p className="underline text-xs">Wszelkie prawa zastrzeżone ©</p>
+            <p className="underline text-xs">
+              {m.wszelkie_prawa_zastrzezone()} ©
+            </p>
           </div>
         </div>
       </div>
