@@ -1,6 +1,8 @@
+"use client";
+import * as m from "@/paraglide/messages.js";
 import { Clock, Building2, Briefcase } from "lucide-react";
 import { H2, Section } from "@/styles/main";
-import { experiences } from "./data/experiences";
+import { useExperiences } from "./data/experiences";
 import {
   CardHeader,
   CompanyName,
@@ -18,10 +20,11 @@ import {
 } from "./style/experience";
 
 const ExperienceTimeline = () => {
+  const { experiences } = useExperiences();
   return (
     <Section $type="about" id="exp">
       <div>
-        <H2>Doświadczenie zawodowe</H2>
+        <H2>{m.doswiadczenie_zawodowe()}</H2>
         <TimelineContainer>
           <VerticalLine />
           {experiences.map((exp, index) => (

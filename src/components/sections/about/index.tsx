@@ -1,3 +1,4 @@
+import * as m from "@/paraglide/messages.js";
 import { Section } from "@/styles/main";
 import { aboutData, aboutDataReverse } from "@/data/sections/about/data";
 import SectionImage from "@/assets/sections/about/woman-working-floor-from-home-with-device.webp";
@@ -11,6 +12,16 @@ type Props = {
 };
 
 export default function AboutMe({ reverse, isMobile }: Props) {
+  const aboutData = {
+    title: m.about_title_one(),
+    overview: m.about_content_one(),
+  };
+
+  const aboutDataReverse = {
+    title: m.about_title_two(),
+    overview: m.about_content_two(),
+  };
+
   const currentData = reverse ? aboutDataReverse : aboutData;
   return (
     <Section $type="about" $reverse={reverse} id="about">

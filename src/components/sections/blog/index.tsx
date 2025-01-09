@@ -1,6 +1,6 @@
 import { H2, Section } from "@/styles/main";
 import { articles } from "@/data/blog/articles/articles";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import {
   ArticleContainer,
   ArticleOverview,

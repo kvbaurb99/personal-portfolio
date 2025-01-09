@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import ErrorImage from "@/assets/404/404-image.png";
 import Image from "next/image";
 

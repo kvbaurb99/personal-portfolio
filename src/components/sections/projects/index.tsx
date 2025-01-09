@@ -1,4 +1,5 @@
 "use client";
+import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
 import Categories from "./elements/filter/Categories";
 import {
@@ -20,7 +21,7 @@ export default function ProjectsSection() {
 
   return (
     <Section id="projects">
-      <H2>Wykonane projekty</H2>
+      <H2>{m.wykonane_projekty()}</H2>
       <Categories
         currentCategory={currentCategory}
         setCurrentCategory={handleCategoryChange}

@@ -1,20 +1,17 @@
+import * as m from "@/paraglide/messages.js";
+import { LanguageProvider } from "@inlang/paraglide-next";
+import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import Footer from "@/components/footer";
 import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph, description, title } from "@/data/meta/meta";
 import { poppins, latto, kaushan } from "@/components/fonts/fonts";
 import "./globals.css";
 
-const Footer = dynamic(() => import("@/components/footer"));
-
 export const metadata: Metadata = {
   title,
   description,
   keywords,
-  robots: {
-    index: false,
-    follow: false,
-  },
   openGraph,
   alternates: {
     canonical: "https://urbanski-frontend.pl",
@@ -40,16 +37,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log(m.about_content_one());
   return (
-    <html lang="pl">
-      <body
-        className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
-      >
-        <main style={{ overflow: "hidden" }}>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang={languageTag()}>
+        <body
+          className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
+        >
+          <main style={{ overflow: "hidden" }}>
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

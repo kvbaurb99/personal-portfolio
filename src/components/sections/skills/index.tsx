@@ -1,5 +1,7 @@
+"use client";
+import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
-import { skills } from "@/data/sections/skills/data";
+import { useSkills } from "@/data/sections/skills/data";
 import {
   Skill,
   SkillBottomLine,
@@ -8,9 +10,10 @@ import {
 } from "./styles/skills";
 
 export default function SkillsSection() {
+  const { skills } = useSkills();
   return (
     <Section id="skills">
-      <H2>Umiejętności techniczne</H2>
+      <H2>{m.umiejetnosci_techniczne()}</H2>
       <SkillsContainer>
         {skills.map((skill, index) => (
           <SkillContainer key={index}>

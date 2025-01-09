@@ -6,15 +6,24 @@ import {
 } from "./styles/mobileMenuStyles";
 import Image from "next/image";
 import LogoDark from "@/assets/logo/J_dark.png";
-import items from "@/data/navigation/items.json";
 import CloseIcon from "@/assets/mobile/close_icon.svg";
 
+type Item = {
+  title: string;
+  id: string;
+};
+
 type Props = {
+  items: Item[];
   isMobileView: boolean;
   setIsMobileView: (value: boolean) => void;
 };
 
-export default function MobileMenu({ isMobileView, setIsMobileView }: Props) {
+export default function MobileMenu({
+  isMobileView,
+  setIsMobileView,
+  items,
+}: Props) {
   const handleCloseMenu = () => setIsMobileView(false);
   if (!isMobileView) return null;
   return (
