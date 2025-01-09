@@ -32,7 +32,7 @@ export default function AboutMe({ reverse, isMobile }: Props) {
         loading="lazy"
         alt="O mnie"
       />
-      <Content aboutData={currentData} />
+      <Content reverse={reverse} aboutData={currentData} />
     </Section>
   );
 }

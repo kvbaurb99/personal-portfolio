@@ -26,6 +26,18 @@ export const AboutTitle = styled.h1`
   }
 `;
 
+export const AboutTitleReverse = styled.p`
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #292929;
+  font-weight: 600;
+  font-family: var(--font-kaushan);
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+  }
+`;
+
 export const AboutOverview = styled.p`
   margin-top: 1.25rem;
   font-size: 1.05rem;
