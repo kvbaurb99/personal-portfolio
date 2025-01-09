@@ -33,6 +33,7 @@ export default function Navigation({ isDark }: Props) {
               height={40}
               priority
               alt="logo"
+              className="hover:scale-90 duration-300"
             />
           </Link>
           <NavList $isDark={isDark || isScrolled}>
