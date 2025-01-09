@@ -80,7 +80,7 @@ export const LanguageLink = styled(Link)<{
   font-size: 0.875rem;
   transition: colors 150ms;
   color: ${(props) => {
-    if (props.$isActive) return "rgb(37, 99, 235)";
+    if (props.$isActive) return "rgb(90, 194, 78)";
     return props.$isScrolled ? "white" : "black";
   }};
 
