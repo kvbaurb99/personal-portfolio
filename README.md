@@ -5,12 +5,12 @@
 ![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-Modern frontend developer portfolio created using Next.js 15, React, and Styled Components. The website supports multiple languages through Paraglide.js integration.
+Modern frontend developer portfolio created using Next.js 15, React, and Styled Components. The website supports multiple languages through Paraglide-Next integration.
 
 ## 🚀 Features
 
 - Responsive design working on all devices
-- Multilingual support (PL/EN) implemented using @inlang/paraglide-js
+- Multilingual support (PL/EN) implemented using @inlang/paraglide-next
 - Smooth animations
 - Optimized image and resource loading
 - Server-side rendering for better performance and SEO
@@ -20,7 +20,7 @@ Modern frontend developer portfolio created using Next.js 15, React, and Styled 
 - **Next.js 15** - React framework with enhanced functionality
 - **React** - JavaScript library for building user interfaces
 - **Styled Components** - CSS-in-JS for component styling
-- **Paraglide.js** - Translation management system
+- **Paraglide-Next** - Translation management system
 - **TypeScript** - Typing for better code quality
 - **Framer Motion** - Animation library
 
