@@ -41,15 +41,23 @@ pnpm install
 yarn install
 ```
 
-3. Run the development server:
+3. Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
 # or
-yarn dev
+yarn install
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Run build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🌍 Multilingual Support
 
