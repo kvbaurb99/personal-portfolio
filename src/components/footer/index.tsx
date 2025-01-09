@@ -15,7 +15,7 @@ export default function Footer() {
           />
           <div className="space-y-2 text-black">
             <p className="opacity-60">Jakub Urbański</p>
-            <p className="text-sm italic">urbanski-dev.pl</p>
+            <p className="text-sm italic">urbanski-frontend.pl</p>
             <p className="underline text-xs">Wszelkie prawa zastrzeżone ©</p>
           </div>
         </div>
