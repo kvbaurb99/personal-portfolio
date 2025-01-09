@@ -11,6 +11,7 @@ import { useNavbarScroll } from "@/hooks/useNavbarScroll";
 import { useState } from "react";
 import MobileMenu from "./mobile";
 import LanguageSwitcher from "../languageSwitcher";
+import { languageTag } from "@/paraglide/runtime";
 
 type Props = {
   isDark?: boolean;
@@ -37,7 +38,9 @@ export default function Navigation({ isDark }: Props) {
           <NavList $isDark={isDark || isScrolled}>
             {items.map((item, index) => (
               <NavItem key={index}>
-                <a href={item.id}>{item.title}</a>
+                <Link locale={languageTag()} href={item.id}>
+                  {item.title}
+                </Link>
               </NavItem>
             ))}
           </NavList>

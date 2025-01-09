@@ -6,19 +6,19 @@ export const useNavigationItems = () => {
     () => [
       {
         title: m.o_mnie(),
-        id: "/#about",
+        id: `/#about`,
       },
       {
         title: m.doswiadczenie(),
-        id: "/#exp",
+        id: `/#exp`,
       },
       {
         title: m.umiejetnosci(),
-        id: "/#skills",
+        id: `/#skills`,
       },
       {
         title: m.portfolio(),
-        id: "/#projects",
+        id: `/#projects`,
       },
     ],
     []
