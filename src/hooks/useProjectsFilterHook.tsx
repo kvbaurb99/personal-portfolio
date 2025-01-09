@@ -1,7 +1,8 @@
 import { useState, useCallback } from "react";
-import { projects } from "@/data/sections/projects/data/projects";
+import { useProjects } from "@/data/sections/projects/data/projects";
 
 export const useProjectFilter = () => {
+  const { projects } = useProjects();
   const [currentCategory, setCurrentCategory] = useState<string>("all");
   const [projectsData, setProjectsData] = useState(projects);
 
