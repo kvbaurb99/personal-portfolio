@@ -26,7 +26,7 @@ export const AboutTitle = styled.h1`
   }
 `;
 
-export const AboutTitleReverse = styled.p`
+export const AboutTitleReverse = styled.h2`
   font-size: 2rem;
   margin-top: 2rem;
   color: #292929;
