@@ -1,4 +1,3 @@
-import * as m from "@/paraglide/messages.js";
 import { LanguageProvider } from "@inlang/paraglide-next";
 import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
@@ -38,7 +37,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(m.about_content_one());
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
