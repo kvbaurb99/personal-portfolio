@@ -7,6 +7,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph, description, title } from "@/data/meta/meta";
 import { poppins, latto, kaushan } from "@/components/fonts/fonts";
 import "./globals.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title,
@@ -41,6 +42,12 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="QTQwzyDwFpIQJjpjWHuRyCnXNiR_kZbIaONEtFi3sfg"
+          />
+        </Head>
         <body
           className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
         >
