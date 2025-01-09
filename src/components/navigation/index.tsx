@@ -26,7 +26,7 @@ export default function Navigation({ isDark }: Props) {
     <>
       <Nav $isScrolled={isDark ? true : isScrolled}>
         <NavContainer>
-          <Link href={"/"}>
+          <Link locale={languageTag()} href={"/"}>
             <Image
               src={isDark || isScrolled ? LogoDark : Logo}
               width={40}
