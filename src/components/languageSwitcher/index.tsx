@@ -1,6 +1,6 @@
 import { Link, usePathname } from "@/lib/i18n";
 import { languageTag } from "@/paraglide/runtime";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type Props = {
   isScrolled: boolean;
@@ -10,6 +10,23 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const currentLocale = languageTag();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const buttonClasses = isScrolled
     ? "bg-gray-800/90 hover:bg-gray-700/90 text-white"
@@ -20,7 +37,7 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
     : "bg-white border-gray-200";
 
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full 
@@ -93,7 +110,7 @@ export default function LanguageSwitcher({ isScrolled }: Props) {
               isScrolled
                 ? "text-white hover:bg-gray-200/50"
                 : "text-black hover:bg-gray-200/50"
-            } items-center gap-3 px-4 py-2 text-sm  transition-colors
+            } items-center gap-3 px-4 py-2 text-sm transition-colors
                       ${currentLocale === "pl" ? "text-blue-600" : ""}`}
             onClick={() => setIsOpen(false)}
           >
