@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   description,
   keywords,
   openGraph,
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "https://urbanski-frontend.pl",
   },
@@ -40,15 +44,15 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
-        <Head>
-          <meta
-            name="google-site-verification"
-            content="QTQwzyDwFpIQJjpjWHuRyCnXNiR_kZbIaONEtFi3sfg"
-          />
-        </Head>
         <body
           className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
         >
+          <Head>
+            <meta
+              name="google-site-verification"
+              content="QTQwzyDwFpIQJjpjWHuRyCnXNiR_kZbIaONEtFi3sfg"
+            />
+          </Head>
           <main style={{ overflow: "hidden" }}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           </main>
