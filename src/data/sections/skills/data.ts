@@ -193,6 +193,10 @@ export const useSkills = () => {
             link: "",
           },
           {
+            name: "GitHub Copilot",
+            link: "https://github.com/features/copilot",
+          },
+          {
             name: "Dall-E 2/3",
             link: "",
           },
