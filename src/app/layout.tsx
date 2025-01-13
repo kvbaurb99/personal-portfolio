@@ -44,15 +44,15 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
+        <head>
+          <meta
+            name="google-site-verification"
+            content="QTQwzyDwFpIQJjpjWHuRyCnXNiR_kZbIaONEtFi3sfg"
+          />
+        </head>
         <body
           className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
         >
-          <Head>
-            <meta
-              name="google-site-verification"
-              content="QTQwzyDwFpIQJjpjWHuRyCnXNiR_kZbIaONEtFi3sfg"
-            />
-          </Head>
           <main style={{ overflow: "hidden" }}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           </main>
