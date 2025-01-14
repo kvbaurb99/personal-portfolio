@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   keywords,
   openGraph,
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
   alternates: {
     canonical: "https://urbanski-frontend.pl",
