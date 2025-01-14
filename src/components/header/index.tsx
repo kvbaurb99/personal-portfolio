@@ -29,7 +29,7 @@ export default function Header({ isMobile }: Props) {
         priority
         alt="Header background"
         className="header-fade object-cover lg:object-fill absolute top-0 left-0 w-full h-full"
-        initial={{ scale: 1.25 }}
+        initial={{ scale: isMobile ? 1.1 : 1.25 }}
         animate={{ scale: 1 }}
         transition={{
           duration: 15,
