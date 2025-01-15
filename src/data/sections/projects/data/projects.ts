@@ -9,6 +9,7 @@ export const useProjects = () => {
     {
       title: "Blog Content Management System",
       slug: "landing-page",
+      slug_page: "blogcms",
       category: "cms",
       image: BlogImage,
       details: [
@@ -29,6 +30,7 @@ export const useProjects = () => {
     {
       title: "Video on Demand Content Management System",
       slug: "landing-page",
+      slug_page: "vodcms",
       category: "cms",
       image: VODImage,
       details: [
@@ -48,6 +50,7 @@ export const useProjects = () => {
     },
     {
       title: "Magro MK Grolik Spółka Jawna",
+      slug_page: "magro",
       slug: "landing-page",
       category: "landing-page",
       image: MagroImage,
@@ -68,6 +71,7 @@ export const useProjects = () => {
     },
     {
       title: "Takelink Publication Market",
+      slug_page: "takelink",
       slug: "landing-page",
       category: "cms",
       image: TakelinkImage,

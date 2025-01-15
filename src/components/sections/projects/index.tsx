@@ -14,21 +14,34 @@ import {
 } from "./styles/projects";
 import { AnimatePresence } from "framer-motion";
 import { useProjectFilter } from "@/hooks/useProjectsFilterHook";
+import { Link } from "@/lib/i18n";
 
-export default function ProjectsSection() {
+type Props = {
+  projectToDelete?: "blogcms" | "vodcms" | "magro" | "takelink";
+};
+
+export default function ProjectsSection({ projectToDelete }: Props) {
   const { currentCategory, projectsData, handleCategoryChange } =
     useProjectFilter();
 
+  const data = projectToDelete
+    ? projectsData.filter((project) => project.slug_page !== projectToDelete)
+    : projectsData;
+
   return (
     <Section id="projects">
-      <H2>{m.wykonane_projekty()}</H2>
+      <H2>
+        {projectToDelete
+          ? m.przegladaj_pozostale_projekty()
+          : m.wykonane_projekty()}
+      </H2>
       <Categories
         currentCategory={currentCategory}
         setCurrentCategory={handleCategoryChange}
       />
       <ProjectGrid layout>
         <AnimatePresence>
-          {projectsData.map((project, index) => (
+          {data.map((project, index) => (
             <ProjectItem
               key={index}
               layout
@@ -38,7 +51,7 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5 }}
             >
               <ProjectContent>
-                <ProjectImageContainer>
+                <ProjectImageContainer href={`/projekty/${project.slug_page}`}>
                   <ProjectImage
                     src={project.image}
                     quality={100}
@@ -48,23 +61,9 @@ export default function ProjectsSection() {
                     fill
                   />
                 </ProjectImageContainer>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                {/*}
-                <div className="flex gap-2 mt-3">
-                  {project.links.map((link, index) => (
-                    <Skill
-                      key={index}
-                      $isLink
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.title}
-                      <SkillBottomLine $isLink />
-                    </Skill>
-                  ))}
-                </div>
-                {*/}
+                <Link href={`/projekty/${project.slug_page}`}>
+                  <ProjectTitle>{project.title}</ProjectTitle>
+                </Link>
                 <ProjectDetailsList>
                   {project.details.map((detail, index) => (
                     <ProjectDetailItem key={index}>

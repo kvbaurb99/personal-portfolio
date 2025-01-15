@@ -92,6 +92,10 @@ export const useSkills = () => {
             link: "https://redux.js.org/",
           },
           {
+            name: "Zustand",
+            link: "https://zustand-demo.pmnd.rs/",
+          },
+          {
             name: "React Hook Form",
             link: "https://react-hook-form.com/",
           },
@@ -123,6 +127,14 @@ export const useSkills = () => {
         items: [
           {
             name: "Lodash",
+            link: "https://lodash.com/",
+          },
+          {
+            name: "Paraglide-Next",
+            link: "https://lodash.com/",
+          },
+          {
+            name: "Axios",
             link: "https://lodash.com/",
           },
           {
@@ -223,6 +235,10 @@ export const useSkills = () => {
         items: [
           {
             name: "Visual Studio Code",
+            link: "",
+          },
+          {
+            name: "Docker",
             link: "",
           },
           {

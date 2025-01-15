@@ -1,6 +1,10 @@
 "use client";
 import styled from "styled-components";
 
+type TechStackProps = {
+  $singleProject?: boolean;
+};
+
 export const TimelineContainer = styled.div`
   position: relative;
   margin-top: 2.5rem;
@@ -91,10 +95,10 @@ export const Description = styled.p`
   }
 `;
 
-export const TechStack = styled.div`
+export const TechStack = styled.div<TechStackProps>`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: ${({ $singleProject }) => ($singleProject ? "1.375rem" : "1.5rem")};
   gap: 0.5rem;
 `;
 

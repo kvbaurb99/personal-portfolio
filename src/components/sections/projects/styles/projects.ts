@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "@/lib/i18n";
 
 type CategoryProps = {
   $isActive: boolean;
@@ -44,7 +45,7 @@ export const ProjectContent = styled.div`
   height: 100%;
 `;
 
-export const ProjectImageContainer = styled.figure`
+export const ProjectImageContainer = styled(Link)`
   overflow: hidden;
   width: 100%;
   height: 250px;
@@ -67,7 +68,7 @@ export const ProjectImage = styled(Image)`
 `;
 
 export const ProjectTitle = styled.h3`
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   font-size: 1.1rem;
   opacity: 0.6;
   font-weight: 500;

@@ -46,7 +46,7 @@ export default function Navigation({ isDark }: Props) {
             ))}
           </NavList>
           <div className="flex items-center gap-6">
-            <LanguageSwitcher isScrolled={isScrolled} />
+            <LanguageSwitcher isScrolled={isDark ? true : isScrolled} />
             <Image
               src={isDark || isScrolled ? HamburgerIconDark : HamburgerIcon}
               width={22}

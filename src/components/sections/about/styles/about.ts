@@ -2,6 +2,10 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+type TitleProps = {
+  $smallerMargin?: boolean;
+};
+
 export const AboutImage = styled(Image)`
   min-width: 370px;
   height: 520px;
@@ -14,9 +18,9 @@ export const AboutImage = styled(Image)`
   }
 `;
 
-export const AboutTitle = styled.h1`
+export const AboutTitle = styled.h1<TitleProps>`
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: ${(props) => (props.$smallerMargin ? "1.25rem" : "2rem")};
   color: #292929;
   font-weight: 600;
   font-family: var(--font-kaushan);
