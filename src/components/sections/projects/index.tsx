@@ -75,7 +75,7 @@ export default function ProjectsSection({ projectToDelete }: Props) {
                 </ProjectDetailsList>
                 <StyledLink href={`/projekty/${project.slug_page}`}>
                   <ViewDetailsButton>
-                    <span>Zobacz szczegóły</span>
+                    <span>{m.zobacz_szczegoly()}</span>
                     <ArrowRight size={16} />
                   </ViewDetailsButton>
                 </StyledLink>

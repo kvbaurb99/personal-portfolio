@@ -1,4 +1,5 @@
 "use client";
+import * as m from "@/paraglide/messages.js";
 import { useState } from "react";
 
 type Props = {
@@ -20,7 +21,7 @@ export default function MainSection({ description }: Props) {
         onClick={() => setIsExpanded(!isExpanded)}
         className="lg:hidden mt-4 text-black/60 text-sm italic underline"
       >
-        {isExpanded ? "Czytaj mniej" : "Czytaj więcej"}
+        {isExpanded ? m.czytaj_mniej() : m.czytaj_wiecej()}
       </button>
     </>
   );
