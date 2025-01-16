@@ -95,3 +95,65 @@ export const ProjectDetailItem = styled.li`
   padding: 0.15rem 0;
   font-family: var(--font-lato);
 `;
+
+export const ViewDetailsButton = styled.div`
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+    transition: all 0.4s ease;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: #374151;
+    border-color: transparent;
+
+    &::before {
+      left: 0;
+    }
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  span,
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+`;

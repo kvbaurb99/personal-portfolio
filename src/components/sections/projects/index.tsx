@@ -11,10 +11,12 @@ import {
   ProjectContent,
   ProjectDetailsList,
   ProjectDetailItem,
+  StyledLink,
+  ViewDetailsButton,
 } from "./styles/projects";
 import { AnimatePresence } from "framer-motion";
 import { useProjectFilter } from "@/hooks/useProjectsFilterHook";
-import { Link } from "@/lib/i18n";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
   projectToDelete?: "blogcms" | "vodcms" | "magro" | "takelink";
@@ -61,9 +63,9 @@ export default function ProjectsSection({ projectToDelete }: Props) {
                     fill
                   />
                 </ProjectImageContainer>
-                <Link href={`/projekty/${project.slug_page}`}>
+                <StyledLink href={`/projekty/${project.slug_page}`}>
                   <ProjectTitle>{project.title}</ProjectTitle>
-                </Link>
+                </StyledLink>
                 <ProjectDetailsList>
                   {project.details.map((detail, index) => (
                     <ProjectDetailItem key={index}>
@@ -71,6 +73,12 @@ export default function ProjectsSection({ projectToDelete }: Props) {
                     </ProjectDetailItem>
                   ))}
                 </ProjectDetailsList>
+                <StyledLink href={`/projekty/${project.slug_page}`}>
+                  <ViewDetailsButton>
+                    <span>Zobacz szczegóły</span>
+                    <ArrowRight size={16} />
+                  </ViewDetailsButton>
+                </StyledLink>
               </ProjectContent>
             </ProjectItem>
           ))}
