@@ -6,6 +6,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import { keywords, openGraph, description, title } from "@/data/meta/meta";
 import { poppins, latto, kaushan } from "@/components/fonts/fonts";
 import "./globals.css";
+import ScrollTop from "@/components/scrollTop";
 
 export const metadata: Metadata = {
   title,
@@ -53,9 +54,12 @@ export default function RootLayout({
           className={`${poppins.variable} ${latto.variable} ${kaushan.variable}`}
         >
           <main style={{ overflow: "hidden" }}>
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            <StyledComponentsRegistry>
+              {children}
+              <Footer />
+              <ScrollTop />
+            </StyledComponentsRegistry>
           </main>
-          <Footer />
         </body>
       </html>
     </LanguageProvider>
