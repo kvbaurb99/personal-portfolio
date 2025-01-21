@@ -36,9 +36,12 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 65%;
+  max-width: 60%;
   width: 100%;
   margin: 2rem 0;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 `;
 
 export const ContactImage = styled(Image)`
@@ -48,6 +51,10 @@ export const ContactImage = styled(Image)`
   z-index: -10;
   @media (max-width: 1024px) {
     display: none;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 480px;
+    right: -12%;
   }
 `;
 
