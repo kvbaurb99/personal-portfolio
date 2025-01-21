@@ -1,9 +1,8 @@
 "use client";
 import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { useState } from "react";
-import { Loader2, File } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { Loader2 } from "lucide-react";
 import {
   AlertContainer,
   AlertDescription,
@@ -17,7 +16,7 @@ import {
   SubmitButton,
   TextArea,
 } from "./styles/contact";
-import { languageTag } from "@/paraglide/runtime";
+import { useContactForm } from "@/hooks/contact/useContactForm";
 
 interface IFormInputs {
   name: string;
@@ -31,9 +30,7 @@ function Alert({ children }: { children: React.ReactNode }) {
 }
 
 export default function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-
+  const { isSubmitting, showSuccess, handleFormSubmit } = useContactForm();
   const {
     register,
     handleSubmit,
@@ -41,44 +38,12 @@ export default function ContactSection() {
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
-    setIsSubmitting(true);
-    try {
-      const formData = new FormData();
-      formData.append("name", data.name);
-      formData.append("email", data.email);
-      formData.append("message", data.message);
-
-      if (data.file && data.file[0]) {
-        formData.append("file", data.file[0]);
-      }
-
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        body: formData, // Remove the headers as FormData sets them automatically
-      });
-
-      if (!response.ok) {
-        throw new Error("Błąd podczas wysyłania wiadomości");
-      }
-
-      setShowSuccess(true);
-      reset();
-      setTimeout(() => {
-        setShowSuccess(false);
-      }, 5000);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Błąd podczas wysyłania wiadomości");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <Section id="contact">
       <H2>{m.dane_kontaktowe()}</H2>
-      <FormContainer onSubmit={handleSubmit(onSubmit)}>
+      <FormContainer
+        onSubmit={handleSubmit((data) => handleFormSubmit(data, reset))}
+      >
         <InputWrapper>
           <Label htmlFor="name">{m.imie()}</Label>
           <Input
@@ -102,7 +67,6 @@ export default function ContactSection() {
           />
           {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
         </InputWrapper>
-
         <InputWrapper>
           <Label htmlFor="message">{m.wiadomosc()}</Label>
           <TextArea
@@ -115,7 +79,6 @@ export default function ContactSection() {
         </InputWrapper>
         <FileInputWrapper>
           <Label htmlFor="file">{m.zalacznik_pdf()}</Label>
-
           <FileInput
             id="file"
             type="file"
