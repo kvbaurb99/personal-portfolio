@@ -120,3 +120,25 @@ export const ErrorMessage = styled.span`
   font-size: 0.75rem;
   margin-top: 0.25rem;
 `;
+
+export const FileInputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+`;
+
+export const FileInput = styled.input`
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  &::-webkit-file-upload-button {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+`;

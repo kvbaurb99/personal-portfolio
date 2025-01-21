@@ -3,11 +3,13 @@ import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, File } from "lucide-react";
 import {
   AlertContainer,
   AlertDescription,
   ErrorMessage,
+  FileInput,
+  FileInputWrapper,
   FormContainer,
   Input,
   InputWrapper,
@@ -15,11 +17,13 @@ import {
   SubmitButton,
   TextArea,
 } from "./styles/contact";
+import { languageTag } from "@/paraglide/runtime";
 
 interface IFormInputs {
   name: string;
   email: string;
   message: string;
+  file?: FileList;
 }
 
 function Alert({ children }: { children: React.ReactNode }) {
@@ -40,12 +44,18 @@ export default function ContactSection() {
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
     setIsSubmitting(true);
     try {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+
+      if (data.file && data.file[0]) {
+        formData.append("file", data.file[0]);
+      }
+
       const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+        body: formData, // Remove the headers as FormData sets them automatically
       });
 
       if (!response.ok) {
@@ -103,7 +113,16 @@ export default function ContactSection() {
             <ErrorMessage>{errors.message.message}</ErrorMessage>
           )}
         </InputWrapper>
+        <FileInputWrapper>
+          <Label htmlFor="file">{m.zalacznik_pdf()}</Label>
 
+          <FileInput
+            id="file"
+            type="file"
+            accept=".pdf"
+            {...register("file")}
+          />
+        </FileInputWrapper>
         <SubmitButton type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <>

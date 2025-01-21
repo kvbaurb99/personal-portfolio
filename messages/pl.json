@@ -56,5 +56,8 @@
   "imie_jest_wymagane": "Imię jest wymagane",
   "wiadomosc_jest_wymagana": "Wiadomość jest wymagana",
   "wysylanie": "Wysyłanie...",
-  "wiadomosc_zostala_wyslana_pomyslnie": "Wiadomość została wysłana pomyślnie"
+  "wiadomosc_zostala_wyslana_pomyslnie": "Wiadomość została wysłana pomyślnie",
+  "wybierz_plik": "Wybierz plik",
+  "nie_wybrano_pliku": "Nie wybrano pliku",
+  "zalacznik_pdf": "Załącznik PDF"
 }

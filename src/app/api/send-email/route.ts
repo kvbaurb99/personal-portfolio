@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { Buffer } from 'buffer';
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const formData = await req.formData();
+    
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+    const file = formData.get('file') as File | null;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -13,7 +19,18 @@ export async function POST(req: Request) {
       },
     });
 
-    const mailOptions = {
+    // Przygotowanie załącznika z konwersją na Buffer
+    let attachments = [];
+    if (file) {
+      const fileBuffer = Buffer.from(await file.arrayBuffer());
+      attachments.push({
+        filename: file.name,
+        content: fileBuffer,
+        contentType: file.type,
+      });
+    }
+
+    const mailOptions: nodemailer.SendMailOptions = {
       from: email,
       to: process.env.EMAIL_USER,
       subject: `Nowa wiadomość od ${name}`,
@@ -24,7 +41,9 @@ export async function POST(req: Request) {
         <p><strong>Od:</strong> ${name}</p>
         <p><strong>Wiadomość:</strong></p>
         <p>${message}</p>
+        ${file ? '<p><strong>Załącznik:</strong> W załączniku</p>' : ''}
       `,
+      attachments: attachments,
     };
 
     await transporter.sendMail(mailOptions);

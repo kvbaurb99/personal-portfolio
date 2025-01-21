@@ -56,5 +56,8 @@
   "imie_jest_wymagane": "Name is required",
   "wiadomosc_jest_wymagana": "Message is required",
   "wysylanie": "Sending...",
-  "wiadomosc_zostala_wyslana_pomyslnie": "Message sent successfully"
+  "wiadomosc_zostala_wyslana_pomyslnie": "Message sent successfully",
+  "wybierz_plik": "Choose file",
+  "nie_wybrano_pliku": "No file selected",
+  "zalacznik_pdf": "PDF Attachment"
 }
