@@ -20,6 +20,7 @@ export async function POST(req: Request) {
       text: message,
       html: `
         <h3>Nowa wiadomość z formularza kontaktowego</h3>
+        <p><strong>Adres email wysyłającego:</strong> ${email}</p>
         <p><strong>Od:</strong> ${name}</p>
         <p><strong>Wiadomość:</strong></p>
         <p>${message}</p>
