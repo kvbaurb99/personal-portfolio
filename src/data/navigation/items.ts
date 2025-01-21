@@ -20,6 +20,10 @@ export const useNavigationItems = () => {
         title: m.portfolio(),
         id: `/#projects`,
       },
+      {
+        title: m.kontakt(),
+        id: `/#contact`,
+      }
     ],
     []
   );

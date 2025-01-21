@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation";
 import ProjectsSection from "@/components/sections/projects";
 import ExperienceTimeline from "@/components/sections/experience";
 import { getHeadersData } from "@/utils/headersData";
+import ContactSection from "@/components/sections/contact";
 
 // dynamic imports
 const AboutMe = dynamic(() => import("@/components/sections/about"));
@@ -20,6 +21,7 @@ export default async function Home() {
       <ExperienceTimeline />
       <SkillsSection />
       <ProjectsSection />
+      <ContactSection />
     </>
   );
 }

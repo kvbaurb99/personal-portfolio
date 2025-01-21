@@ -20,6 +20,8 @@
   "kontrola_wersji": "Version Control",
   "testowanie": "Testing",
   "czytaj_wiecej": "Read More",
+  "kontakt": "Contact",
+  "dane_kontaktowe": "Contact form",
   "czytaj_mniej": "Read Less",
   "narzedzia_ai": "AI Tools",
   "narzedzia_developerskie": "Developer Tools",
@@ -44,5 +46,15 @@
   "czolowe_pozycje_w_google": "Top Positions in Google",
   "autoryzacja_uzytkownikow": "User Authorization System",
   "system_platnosci": "Payment System",
-  "kupno_artykulow_i_publikacji": "Purchase of Articles and Publications"
+  "kupno_artykulow_i_publikacji": "Purchase of Articles and Publications",
+  "imie": "Name",
+  "adres_email": "Email",
+  "wiadomosc": "Message",
+  "wyslij_wiadomosc": "Send Message",
+  "email_jest_wymagany": "Email is required",
+  "email_niepoprawny": "Email is invalid",
+  "imie_jest_wymagane": "Name is required",
+  "wiadomosc_jest_wymagana": "Message is required",
+  "wysylanie": "Sending...",
+  "wiadomosc_zostala_wyslana_pomyslnie": "Message sent successfully"
 }

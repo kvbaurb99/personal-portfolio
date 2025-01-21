@@ -1,46 +1,127 @@
+"use client";
+import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
-import ContactImage from "@/assets/sections/contact/composing-email-digital-device.jpg";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 import {
-  Grid,
+  AlertContainer,
+  AlertDescription,
+  ErrorMessage,
+  FormContainer,
   Input,
-  InputGrid,
-  StyledForm,
-  StyledImage,
+  InputWrapper,
+  Label,
+  SubmitButton,
   TextArea,
 } from "./styles/contact";
 
+interface IFormInputs {
+  name: string;
+  email: string;
+  message: string;
+}
+
+function Alert({ children }: { children: React.ReactNode }) {
+  return <AlertContainer>{children}</AlertContainer>;
+}
+
 export default function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<IFormInputs>();
+
+  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Błąd podczas wysyłania wiadomości");
+      }
+
+      setShowSuccess(true);
+      reset();
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Błąd podczas wysyłania wiadomości");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Section id="contact">
-      <Grid>
-        <StyledForm>
-          <H2>Skontaktuj się ze mną</H2>
-          <InputGrid>
-            <Input
-              placeholder="Twój email..."
-              type="text"
-              name="email"
-              id="email"
-            />
-            <Input
-              placeholder="Twoja nazwa..."
-              type="text"
-              name="name"
-              id="name"
-            />
-          </InputGrid>
-          <TextArea
-            rows={8}
-            placeholder="Twoja wiadomość..."
-            name="message"
-            id="message"
+      <H2>{m.dane_kontaktowe()}</H2>
+      <FormContainer onSubmit={handleSubmit(onSubmit)}>
+        <InputWrapper>
+          <Label htmlFor="name">{m.imie()}</Label>
+          <Input
+            id="name"
+            {...register("name", { required: m.imie_jest_wymagane() })}
           />
-          <button className="max-w-fit border mt-2.5 px-6 py-2 text-lg rounded">
-            <span>Wyślij wiadomość</span>
-          </button>
-        </StyledForm>
-        <StyledImage src={ContactImage} alt="contact" />
-      </Grid>
+          {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
+        </InputWrapper>
+        <InputWrapper>
+          <Label htmlFor="email">{m.adres_email()}</Label>
+          <Input
+            id="email"
+            type="email"
+            {...register("email", {
+              required: m.email_jest_wymagany(),
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: m.email_niepoprawny(),
+              },
+            })}
+          />
+          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        </InputWrapper>
+
+        <InputWrapper>
+          <Label htmlFor="message">{m.wiadomosc()}</Label>
+          <TextArea
+            id="message"
+            {...register("message", { required: m.wiadomosc_jest_wymagana() })}
+          />
+          {errors.message && (
+            <ErrorMessage>{errors.message.message}</ErrorMessage>
+          )}
+        </InputWrapper>
+
+        <SubmitButton type="submit" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <Loader2 className="animate-spin" size={16} />
+              {m.wysylanie()}
+            </>
+          ) : (
+            m.wyslij_wiadomosc()
+          )}
+        </SubmitButton>
+      </FormContainer>
+      {showSuccess && (
+        <Alert>
+          <AlertDescription>
+            {m.wiadomosc_zostala_wyslana_pomyslnie()}
+          </AlertDescription>
+        </Alert>
+      )}
     </Section>
   );
 }

@@ -19,6 +19,8 @@
   "biblioteki": "Biblioteki",
   "kontrola_wersji": "Kontrola wersji",
   "testowanie": "Testowanie",
+  "kontakt": "Kontakt",
+  "dane_kontaktowe": "Formularz kontaktowy",
   "czytaj_wiecej": "Czytaj więcej",
   "czytaj_mniej": "Czytaj mniej",
   "narzedzia_ai": "Narzędzia AI",
@@ -44,5 +46,15 @@
   "czolowe_pozycje_w_google": "Czołowe pozycje w Google",
   "autoryzacja_uzytkownikow": "Autoryzacja użytkowników",
   "system_platnosci": "System płatności",
-  "kupno_artykulow_i_publikacji": "Kupno artykułów i publikacji"
+  "kupno_artykulow_i_publikacji": "Kupno artykułów i publikacji",
+  "imie": "Imię",
+  "adres_email": "Adres email",
+  "wiadomosc": "Wiadomość",
+  "wyslij_wiadomosc": "Wyślij wiadomość",
+  "email_jest_wymagany": "Email jest wymagany",
+  "email_niepoprawny": "Email jest niepoprawny",
+  "imie_jest_wymagane": "Imię jest wymagane",
+  "wiadomosc_jest_wymagana": "Wiadomość jest wymagana",
+  "wysylanie": "Wysyłanie...",
+  "wiadomosc_zostala_wyslana_pomyslnie": "Wiadomość została wysłana pomyślnie"
 }
