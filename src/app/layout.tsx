@@ -3,6 +3,7 @@ import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import StyledComponentsRegistry from "@/lib/registry";
+import { Analytics } from "@vercel/analytics/react";
 import { keywords, openGraph, description, title } from "@/data/meta/meta";
 import { poppins, latto, kaushan } from "@/components/fonts/fonts";
 import "./globals.css";
@@ -60,6 +61,7 @@ export default function RootLayout({
               <ScrollTop />
             </StyledComponentsRegistry>
           </main>
+          <Analytics />
         </body>
       </html>
     </LanguageProvider>
