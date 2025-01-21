@@ -17,6 +17,7 @@ import VODFour from "@/assets/sections/projects/vod_4.png";
 import MagroOne from "@/assets/sections/projects/magro_1.png";
 import MagroTwo from "@/assets/sections/projects/magro_2.png";
 import MagroThree from "@/assets/sections/projects/magro_3.png";
+import MagroFour from "@/assets/sections/projects/magro_4.png";
 
 export const singleProjects = [
   {
@@ -94,6 +95,6 @@ export const singleProjects = [
       "Magro MK Grolik - strona wizytówka dla firmy zajmującej się przetwórstwem pieczarek. Strona posiada podstrony z informacjami oraz ofertą. Strona posiada także swojego bloga z artykułami napisanymi przez właścicieli firmy, treść strony dostępna jest w kilku językach które można zmienić w menu nawigacji. W porównaniu do pozostałych projektów została ona stworzona jeszcze w technologii Pages Router. Strona posiada formularz kontaktowy który po wypełnieniu przez użytkownika wysyła wiadomość na firmowy adres e-mail.",
     overview:
       "Magro MK Grolik - strona wizytówka dla firmy zajmującej się przetwórstwem pieczarek.",
-    images: [MagroOne, MagroTwo, MagroThree],
+    images: [MagroOne, MagroTwo, MagroFour, MagroThree],
   },
 ];
