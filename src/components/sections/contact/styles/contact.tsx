@@ -36,9 +36,19 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 800px;
+  max-width: 65%;
   width: 100%;
   margin: 2rem 0;
+`;
+
+export const ContactImage = styled(Image)`
+  position: absolute;
+  top: 12%;
+  right: -15%;
+  z-index: -10;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const InputWrapper = styled.div`

@@ -2,11 +2,13 @@
 import * as m from "@/paraglide/messages.js";
 import { H2, Section } from "@/styles/main";
 import { useForm } from "react-hook-form";
+import ContactImageSrc from "@/assets/sections/contact/messages-concept-illustration_114360-703.jpg";
 import { Loader2 } from "lucide-react";
 import {
   AlertContainer,
   AlertDescription,
   ErrorMessage,
+  ContactImage,
   FileInput,
   FileInputWrapper,
   FormContainer,
@@ -17,6 +19,7 @@ import {
   TextArea,
 } from "./styles/contact";
 import { useContactForm } from "@/hooks/contact/useContactForm";
+import Image from "next/image";
 
 interface IFormInputs {
   name: string;
@@ -39,7 +42,7 @@ export default function ContactSection() {
   } = useForm<IFormInputs>();
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="relative">
       <H2>{m.dane_kontaktowe()}</H2>
       <FormContainer
         onSubmit={handleSubmit((data) => handleFormSubmit(data, reset))}
@@ -104,6 +107,13 @@ export default function ContactSection() {
           </AlertDescription>
         </Alert>
       )}
+      <ContactImage
+        src={ContactImageSrc}
+        width={520}
+        height={360}
+        loading="lazy"
+        alt="Contact image"
+      />
     </Section>
   );
 }
