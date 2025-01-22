@@ -9,11 +9,16 @@ export const AlertContainer = styled.div`
   border-radius: 0.375rem;
   padding: 1rem;
   margin-top: 1rem;
+  max-width: 60%;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: #166534;
   animation: slideIn 0.3s ease-out;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 
   @keyframes slideIn {
     from {
