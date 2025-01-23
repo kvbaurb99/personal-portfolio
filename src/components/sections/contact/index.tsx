@@ -109,7 +109,7 @@ export default function ContactSection() {
       )}
       <ContactImage
         src={ContactImageSrc}
-        width={560}
+        width={520}
         height={360}
         loading="lazy"
         alt="Contact image"

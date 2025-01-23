@@ -52,7 +52,7 @@ export const FormContainer = styled.form`
 export const ContactImage = styled(Image)`
   position: absolute;
   top: 12%;
-  right: -15%;
+  right: -12%;
   z-index: -10;
   @media (max-width: 1024px) {
     display: none;
