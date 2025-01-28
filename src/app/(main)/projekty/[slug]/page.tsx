@@ -8,12 +8,14 @@ import {
   TechTag,
 } from "@/components/sections/experience/style/experience";
 import MainSection from "@/components/singleProject/mainSection/MainSection";
+import { languageTag } from "@/paraglide/runtime";
 
 type Props = Promise<{ slug: "blogcms" | "vodcms" | "magro" | "takelink" }>;
 
 export default async function ProjectPage({ params }: { params: Props }) {
   const { slug } = await params;
   const project = singleProjects.find((p) => p.slug === slug);
+  const locale = languageTag();
 
   if (!project) {
     return notFound();
@@ -28,7 +30,7 @@ export default async function ProjectPage({ params }: { params: Props }) {
             <TechTag key={techIndex}>{tech}</TechTag>
           ))}
         </TechStack>
-        <MainSection description={project.description} />
+        <MainSection description={locale === "pl" ? project.description : project.description_en} />
       </Section>
       <ProjectsSection projectToDelete={slug} />
     </>
