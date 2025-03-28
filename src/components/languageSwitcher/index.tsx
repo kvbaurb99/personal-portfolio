@@ -1,5 +1,6 @@
 import { usePathname } from "@/lib/i18n";
 import { languageTag } from "@/paraglide/runtime";
+import { TechStack } from "../sections/experience/style/experience";
 import { useState, useEffect, useRef } from "react";
 import {
   Button,
