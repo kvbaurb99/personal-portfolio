@@ -7,7 +7,7 @@ export const useExperiences = () => {
       {
         company: "WebLeaders",
         position: "Frontend Developer",
-        period: `2023 - ${m.obecnie()}`,
+        period: `2022 - ${m.obecnie()}`,
         description: m.job_one(),
         technologies: [
           "React",
@@ -42,7 +42,7 @@ export const useExperiences = () => {
       {
         company: "Komputronik",
         position: "IT Specialist",
-        period: "2016 - 2018",
+        period: "2020 - 2021",
         description: m.job_three(),
         technologies: [
           "Windows",
